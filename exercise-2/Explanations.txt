@@ -1,0 +1,21 @@
+1. React is an open source front-end Javascript library made by Meta. It's used for building client interfaces
+for both websites and mobile applications. 
+
+2.React components are independent and reusable bits of code that serve the same purpose as functions in Javascript.
+There'stwo types of components that are class and functions. React components are usually written using
+JSX but not always
+
+3.Single page application dont update the whole content of the page at once so it makes websites faster to
+update. Example if you scroll down on web page that has photos it updates photos row by row.
+
+4.Declarative programming is a style of building structure and elements of computer programs. It focuses 
+what the program should accomplish and not so much as how it is done. HTML, CSS and SQL are 
+widely used examples of declarative programming lanquage.
+
+5. JSX is an abbreviation for JavaScript Syntax Extension. It's an React extension for the JavaScript.
+It makes easier to write and add HTML in React.
+
+6. Asynchronous communication don't need to be scheduled and it can run it's processes at any rate. Asynchronous
+operations can run at same time so it don't need to wait other steps to finish before starting a new one.
+ 
+   
