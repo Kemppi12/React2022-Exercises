@@ -11,28 +11,30 @@
   
   .movie__director {
     display: flex;
+    font-size: 2rem;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
     flex-flow: column-reverse;
     justify-content: flex-start;
     flex: 1;
+    color: rgb(216, 68, 0);
   }
   
   .movie__title {
     color: #3a3a3a;
-    font-size: 1rem;
+    font-size: 2rem;
     flex: 1;
     margin: 0 1rem;
-    color: white;
+    color: rgb(216, 68, 0);
   }
   
   .movie__year {
     font-size: 1rem;
     font-weight: bold;
-    color: white;
-    background-color: #40005d;
-    border: 1px solid white;
+    color: rgb(0, 0, 0);;
+    background-color: rgb(216, 68, 0);
+    border: 5px solid rgb(0, 0, 0);
     padding: 0.5rem;
     border-radius: 12px;
   }
