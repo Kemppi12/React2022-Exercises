@@ -36,6 +36,24 @@ const scifi = [
   },
 ];
 
+const Action = [
+  {
+    title: "The Bourne Identity",
+    director: "Doug Liman",
+    year: "2002",
+  },
+  {
+    title: "The Bourne Supremacy",
+    director: "Paul Greengrass",
+    year: "2004",
+  },
+  {
+    title: "The Bourne Ultimatum",
+    director: "Paul Greengrass",
+    year: "2007",
+  },
+];
+
 
 const App = () => {
   return (
@@ -43,6 +61,7 @@ const App = () => {
       <h1>Movies</h1>
       <GenreList movies={thrillers} genreName="Thriller"/>
       <GenreList movies={scifi} genreName="Scifi"/>
+      <GenreList movies={Action} genreName="Action"/>
     </div>
   );
 };
