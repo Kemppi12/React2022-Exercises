@@ -1,8 +1,7 @@
 import MoviesList from "./components/MoviesList";
 import "./App.css";
 import React from "react";
-import {useState} from "react";
-
+import { useState, useEffect } from "react";
 
 /*const movies = [
   {
@@ -22,9 +21,14 @@ import {useState} from "react";
 const App = () => {
 const [movies, setMovies] = useState([]);
 const [error, setError] = useState(null);
+const [loading, setLoading] = useState (false);
 
+useEffect (() => {}, [movies]);
+  
   const fetchMoviesHandler = async () => {
+
     try{
+    setLoading (true);
     const response = await fetch ("https://swapi.dev/api/films/");
 
     if (!response.ok){
@@ -44,23 +48,33 @@ const [error, setError] = useState(null);
     })
 
     setMovies(transformedMovies);
+    setLoading(false);
   } catch (error){
     setError(error.message);
+    setLoading(false);
   }
 };
 
 let content;
 
-if (error){
+if (loading) {
+  content = <p>Loading...</p>;
+}
+else if(error){
   content = <p>{error}</p>;
-} else {
+} 
+else {
   content = <MoviesList movies={movies} />;
 }
   
   return (
     <>
       <section>
-        <button onClick={fetchMoviesHandler}>Fetch Movies</button>
+        <button onClick={fetchMoviesHandler}>
+        {loading ? 
+        <>Loading...</> :
+        <>Fetch Movies</>}
+        </button>
       </section>
       <section>
         {content}
