@@ -1,20 +1,21 @@
 import { useHistory } from "react-router-dom";
 
 
-const ItalyPage = () => {
+
+const CanadaPage = () => {
   const history = useHistory();
 
 
   const backToFinlandHandler = ()=>{
-  history.push('/');
+  history.push('/')
   };
 
   return(
   <>
-  <h2>Welcome to Italy!</h2>
+  <h2>Welcome to cold and snowy Canada!</h2>
   <button onClick={backToFinlandHandler}>Back to Finland</button>
   </>
   );
 };
 
-export default ItalyPage;
+export default CanadaPage;

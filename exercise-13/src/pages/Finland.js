@@ -2,6 +2,7 @@ import Modal from "../components/Modal";
 import Backdrop from "../components/Backdrop";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+//import { getValue } from "@testing-library/user-event/dist/utils";
 
 const FinlandPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -17,11 +18,23 @@ const FinlandPage = () => {
 
   const randomHandler = () => {
 
-    if (Math.random() < 0.5){
+
+    let randomValue = Math.random();
+
+    if (randomValue < 0.20){
     history.push("/italy");    //history.replace("/italy"); (voi mahd. käyttää mutta korvaa vanhan tai "edellisen")
-    }  else {
+    }  else if (randomValue < 0.4){
       history.push("/brazil");
     } 
+    else if (randomValue < 0.6){
+      history.push("/sweden");
+    }
+    else if (randomValue < 0.8){
+      history.push("/china");
+    }
+    else {
+      history.push("/canada")}
+      
   };
 
   return (
@@ -36,4 +49,6 @@ const FinlandPage = () => {
   );
 };
 
+
 export default FinlandPage;
+
